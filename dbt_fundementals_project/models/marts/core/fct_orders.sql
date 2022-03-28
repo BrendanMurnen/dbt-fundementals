@@ -10,6 +10,6 @@ with successful_transactions as (
 select
     order_id
     , customer_id
-    , amount_processed_usd
+    , coalesce(amount_processed_usd, 0) amount_processed_usd
 from {{ ref('stg_orders') }}
 left join successful_transactions using (order_id)
