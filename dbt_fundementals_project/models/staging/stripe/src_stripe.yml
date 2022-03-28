@@ -2,8 +2,7 @@ version: 2
 
 sources:
   - name: stripe
-    database: DBT_FUNDEMENTALS_BM
+    database: DBT_FUNDAMENTALS_BM
     schema: STRIPE
     tables:
-      - name: customers
-      - name: orders
+      - name: payment
